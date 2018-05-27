@@ -42,8 +42,10 @@
   display: flex;
   justify-content: space-around;
 }
-.navLinks{
+.navLinks, .projectLink{
   text-decoration: none;
+}
+.navLinks{
   color: #777;
   padding-bottom: 10px;
 }
@@ -54,4 +56,28 @@
   color: #002;
   border-bottom: 2px solid coral;
 }
-
+.Projects{
+  grid-column: 2 / 4;
+  grid-gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.Projects h4,
+.Projects h5{
+  font-weight: normal;
+}
+.Projects > h5{
+  justify-self: end;
+}
+.ProjectCard{
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+.type{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: yellow;
+  border-radius: 50%;
+}
