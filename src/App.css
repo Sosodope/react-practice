@@ -81,3 +81,35 @@
   background: yellow;
   border-radius: 50%;
 }
+.Add-bio{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+.Add-bio textarea{
+  grid-column: span 2;
+  width: 180px;
+  height: 80px;
+}
+.Save-btn, .Cancel-btn{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.Cancel-btn{
+  width: 80px;
+  margin-left: -30px;
+}
+.Save-btn{
+  width: 60px;
+  background: #29d229;
+  color: white;
+  height: 30px;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}

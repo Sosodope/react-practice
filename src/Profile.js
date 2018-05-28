@@ -4,6 +4,20 @@ import location from './placeholder.svg';
 import './App.css';
 
 class Profile extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      'bio' : 'hidden'
+    }
+    this.addBio = this.addBio.bind(this)
+    this.cancelEdit = this.cancelEdit.bind(this)
+  }
+  addBio(){
+    this.setState({bio: 'shown'})
+  }
+  cancelEdit(){
+    this.setState({bio: 'hidden'})
+  }
   render() {
     return (
       <div className="Profile">
@@ -12,7 +26,12 @@ class Profile extends Component {
           <h1 className="fullName">Jane Smith</h1>
           <h4 className="userName">jsmith2018</h4>
           <p className="Profile-bio">
-            <button>Add a bio</button>
+            <div className="Add-bio" bio={this.state.bio} style = {{display: this.state.bio === 'shown'? 'grid': 'none'}}>
+              <textarea></textarea>
+              <button className="Save-btn">Save</button>
+              <button className="Cancel-btn" onClick={this.cancelEdit}>Cancel</button>
+            </div>
+            <button onClick={this.addBio} style = {{display: this.state.bio === 'shown'? 'none': 'grid'}}>Add a bio</button>
           </p>
           <p className="Profile-info location">
             <img src={location} /> Planet Earth
