@@ -37,7 +37,7 @@ class Profile extends Component {
           <h1 className="fullName">Jane Smith</h1>
           <h4 className="userName">jsmith2018</h4>
           <p className="Profile-bio">
-            <p>{this.state.bioDescription}</p>
+            <p className="userBio">{this.state.bioDescription}</p>
             <div className="Add-bio" bio={this.state.bio} style = {{display: this.state.bio === 'shown'? 'grid': 'none'}}>
               <textarea onChange={this.writeBio}></textarea>
               <button className="Save-btn" onClick={this.saveBio}>Save</button>
